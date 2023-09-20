@@ -9,6 +9,7 @@ while True:
     if input_string.lower() == 'exit':
         print("Exiting..")
         break
+        #
 
     # Aufteilen der Eingabe in Blöcke
     blocks = input_string.split('-')
