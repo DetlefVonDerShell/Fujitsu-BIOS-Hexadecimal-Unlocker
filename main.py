@@ -30,8 +30,10 @@ while True:
             # Print Statement
             print("Input ok.")
             
-            # Change Input to Hex
+            # Change Input to Hex and cut off '0x' to get result-string utf-8 representation
             hex_result = hex(int(result_string, 16))[2:].encode('utf-8')
+
+            # CRC Function on hex_result
             crc_sum = hex(crc32_func(bytearray(hex_result)))
 
             print("The master password is: ", crc_sum[2:])
